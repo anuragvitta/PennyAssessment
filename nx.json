@@ -27,6 +27,9 @@
     ]
   },
   "projects": {
+    "auth": {
+      "tags": []
+    },
     "users-app-ui": {
       "tags": []
     },

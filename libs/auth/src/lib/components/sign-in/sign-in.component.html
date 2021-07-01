@@ -1,0 +1,64 @@
+<div>
+  <mat-card
+    ><mat-card-title class="header">SignIn Form!</mat-card-title>
+
+    <mat-card-content>
+      <hr />
+      <div class="container" [formGroup]="signInForm">
+        <mat-form-field appearance="outline">
+          <mat-label>Username</mat-label>
+          <input
+            matInput
+            placeholder="Enter Username"
+            formControlName="userName"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            [type]="hide ? 'password' : 'text'"
+            placeholder="Enter Password"
+            formControlName="password"
+          />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+          </button>
+          <mat-error *ngIf="signInForm.get('password')?.errors?.minlength">
+            Password must be atleast 8 characters.
+          </mat-error>
+        </mat-form-field>
+        <!-- <div> -->
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="signInUser()"
+          [disabled]="!signInForm.valid"
+        >
+          Signin
+        </button>
+
+        <!-- </div> -->
+        <div>
+          <a mat-raised-button color="primary" [routerLink]="['sign-up']">
+            Signup
+          </a>
+          <a
+            class="forgot-link"
+            mat-raised-button
+            [routerLink]="['forgot-password']"
+            color="primary"
+            (click)="forgotPassword()"
+            >Forgot Password</a
+          >
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,22 @@
+.header {
+  text-align: center;
+}
+.container {
+  display: grid;
+  justify-content: center;
+  mat-form-field {
+    max-width: 280px;
+  }
+}
+mat-card-content {
+  margin-top: 15px;
+}
+mat-card {
+  max-width: 400px;
+}
+.forgot-link {
+  margin-left: 25px;
+}
+button {
+  margin-bottom: 15px;
+}
