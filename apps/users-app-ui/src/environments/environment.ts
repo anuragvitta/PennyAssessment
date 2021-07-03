@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   apis: {
-    baseUrl: 'http://localhost:3333/api',
+    baseUrl: 'https://my-final-service.appspot.com/api',
   },
 };
 
