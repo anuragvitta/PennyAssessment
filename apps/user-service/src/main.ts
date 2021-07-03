@@ -14,8 +14,9 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
-  const port = 8080;
+  const port = process.env.PORT || 8080;
   await app.listen(port, () => {
+    console.log('listening on port',port)
     Logger.log('Listening at http://localhost:' + port + '/' + globalPrefix);
   });
 }
