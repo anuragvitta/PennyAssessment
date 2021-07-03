@@ -1,5 +1,4 @@
 runtime: nodejs
-env: flex
 
 env_variables:
   DATABASE_URL: "mongodb+srv://penny-user:rWAEFWQnh6gWA5xH@mycluster.ex8oh.mongodb.net/myFirstDatabase?retryWrites=true"
