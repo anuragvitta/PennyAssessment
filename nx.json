@@ -30,6 +30,9 @@
     "auth": {
       "tags": []
     },
+    "user-service": {
+      "tags": []
+    },
     "users-app-ui": {
       "tags": []
     },

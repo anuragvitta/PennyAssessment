@@ -1,0 +1,31 @@
+<p>
+  <mat-toolbar color="primary">
+    <span>Users Dashboard</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="primary" (click)="logOutUser()">
+      Logout
+    </button>
+  </mat-toolbar>
+</p>
+<div>
+  <mat-card
+    ><mat-card-title class="header">Users List!</mat-card-title>
+    <mat-card-content>
+      <hr />
+      <div class="container">
+        <div>
+          USERNAME
+          <hr />
+        </div>
+        <div>
+          MAIDENNAME
+          <hr />
+        </div>
+        <ng-container *ngFor="let user of allUsers">
+          <div>{{ user.userName }}</div>
+          <div>{{ user.maidenName }}</div>
+        </ng-container>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthHttpService } from '../../services/auth-http.service';
 
 @Component({
   selector: 'assessment-penny-sign-up',
@@ -14,7 +11,11 @@ import {
 export class SignUpComponent implements OnInit {
   signUpForm: FormGroup;
   hide = true;
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private authHttpService: AuthHttpService,
+    private router: Router
+  ) {
     this.signUpForm = this.formBuilder.group({
       userName: [null, Validators.required],
       password: [null, [Validators.required, Validators.minLength(8)]],
@@ -24,6 +25,14 @@ export class SignUpComponent implements OnInit {
 
   ngOnInit(): void {}
   createAccount() {
-    console.log(this.signUpForm.value);
+    this.authHttpService.signUpUser(this.signUpForm.value).subscribe(
+      (data) => {
+        alert(`User ${data.userName} created sucessfully,Please sign in`);
+        this.router.navigate(['sign-in']);
+      },
+      (error) => {
+        alert(error.error.message);
+      }
+    );
   }
 }

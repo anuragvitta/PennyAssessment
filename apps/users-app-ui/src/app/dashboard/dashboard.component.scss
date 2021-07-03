@@ -1,0 +1,15 @@
+.header {
+  text-align: center;
+}
+.container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+}
+mat-card-content {
+  margin-top: 15px;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}

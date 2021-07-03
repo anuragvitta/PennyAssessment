@@ -11,6 +11,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { AuthService } from './services/auth.service';
+import { HttpClientModule } from '@angular/common/http';
+import { AuthHttpService } from './services/auth-http.service';
 @NgModule({
   imports: [
     CommonModule,
@@ -22,6 +24,7 @@ import { AuthService } from './services/auth.service';
     ReactiveFormsModule,
     FormsModule,
     MatIconModule,
+    HttpClientModule,
   ],
   declarations: [SignUpComponent, SignInComponent, ResetPasswordComponent],
 })
@@ -29,7 +32,7 @@ export class AuthModule {
   static forRoot(): ModuleWithProviders<AuthModule> {
     return {
       ngModule: AuthModule,
-      providers: [AuthService],
+      providers: [AuthService, AuthHttpService],
     };
   }
 }

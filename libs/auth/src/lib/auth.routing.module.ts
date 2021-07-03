@@ -4,7 +4,7 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 const routes: Routes = [
-  { path: '', component: SignInComponent },
+  { path: 'sign-in', component: SignInComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'forgot-password', component: ResetPasswordComponent },
 ];

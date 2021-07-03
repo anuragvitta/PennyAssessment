@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormGroup,
-  FormBuilder,
-  Validators,
-  FormControl,
-} from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthHttpService } from '../../services/auth-http.service';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -19,7 +15,8 @@ export class SignInComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private authService: AuthService
+    private authService: AuthService,
+    private authHttpService: AuthHttpService
   ) {
     this.signInForm = this.formBuilder.group({
       userName: [null, Validators.required],
@@ -29,11 +26,15 @@ export class SignInComponent implements OnInit {
 
   ngOnInit(): void {}
   signInUser() {
-    console.log(this.signInForm.value);
-    this.authService.updateLocalStorage({
-      userName: this.signInForm.value.userName,
-      loggedInAt: new Date(),
-    });
+    this.authHttpService.validateUser(this.signInForm.value).subscribe(
+      (data) => {
+        this.authService.updateLocalStorage(data.access_token);
+        this.router.navigate(['']);
+      },
+      (error) => {
+        alert(error.error.message);
+      }
+    );
   }
   forgotPassword() {
     this.router.navigate(['forgot-password']);

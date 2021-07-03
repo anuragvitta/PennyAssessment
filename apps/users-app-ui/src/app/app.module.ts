@@ -3,8 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AuthModule } from '@assessment-penny/auth';
+import { AuthModule, ENVIRONMENT } from '@assessment-penny/auth';
 import { AppRoutingModule } from './app-routing.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -12,8 +15,9 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserAnimationsModule,
     AuthModule.forRoot(),
     AppRoutingModule,
+    DashboardModule,
   ],
-  providers: [],
+  providers: [{ provide: ENVIRONMENT, useValue: environment }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
