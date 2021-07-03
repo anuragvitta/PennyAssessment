@@ -25,7 +25,7 @@
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main"
+    "postinstall": "ngcc --properties es2015 browser module main"
   },
   "private": true,
   "dependencies": {
