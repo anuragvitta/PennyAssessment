@@ -1,12 +1,12 @@
 # compiled output
-/dist
-/tmp
-/out-tsc
+dist/
+tmp/
+out-tsc/
 
 # dependencies
-/node_modules
+node_modules/
 
-/libs
-/apps/users-app-ui
-/apps/users-app-ui-e2e
-/tools
+libs/
+apps/users-app-ui/
+apps/users-app-ui-e2e/
+tools/
