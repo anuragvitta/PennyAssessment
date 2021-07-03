@@ -1,8 +1,11 @@
-runtime: nodejs12
-env: standard
-manual_scaling:
-  instances: 1
-env_variables:
-  DATABASE_URL: "mongodb+srv://penny-user:rWAEFWQnh6gWA5xH@mycluster.ex8oh.mongodb.net/myFirstDatabase?retryWrites=true"
+runtime: python27
+api_version: 1
+threadsafe: true
 
+handlers:
+- url: /
+  static_files: users-app-ui/index.html
+  upload: users-app-ui/index.html
 
+- url: /
+  static_dir: users-app-ui

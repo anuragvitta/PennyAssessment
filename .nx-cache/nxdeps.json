@@ -428,7 +428,7 @@
           },
           {
             "file": "apps/users-app-ui/proxy.conf.json",
-            "hash": "79d5aa9d7ba95752d8b96e38a2693216c9dbe4d8",
+            "hash": "1eff14590d5ccaca3ac663386ea07019761b24bc",
             "ext": ".json"
           },
           {
@@ -528,12 +528,12 @@
           },
           {
             "file": "apps/users-app-ui/src/environments/environment.prod.ts",
-            "hash": "812ff2537d6a8a6253390e868e5e2c82d026f5e4",
+            "hash": "e85bb9bb824ee33271f69a8764460b1ce092554c",
             "ext": ".ts"
           },
           {
             "file": "apps/users-app-ui/src/environments/environment.ts",
-            "hash": "570d78b111a9254776ae40cb794af2002149bde6",
+            "hash": "f62a370d1e250721b2a91755a3562128f6cb60a2",
             "ext": ".ts"
           },
           {
@@ -652,12 +652,12 @@
           },
           {
             "file": "libs/auth/src/lib/components/reset-password/reset-password.component.html",
-            "hash": "b622c1c1233dbbe65faf3c780025411a985bbdc7",
+            "hash": "329fb96c5a2d4fe5cc007ff69845c5755057b5f5",
             "ext": ".html"
           },
           {
             "file": "libs/auth/src/lib/components/reset-password/reset-password.component.scss",
-            "hash": "0a61f5d69527bb31f2ebfe278eaded426667fe6f",
+            "hash": "b2176995840ac8a76e20464efec9705cb1184e70",
             "ext": ".scss"
           },
           {
@@ -672,12 +672,12 @@
           },
           {
             "file": "libs/auth/src/lib/components/sign-in/sign-in.component.html",
-            "hash": "cfddd9a4ce1cc1c40f3a43f353123b3f1629be36",
+            "hash": "fee066464a8fbc690796d1358843397965882e85",
             "ext": ".html"
           },
           {
             "file": "libs/auth/src/lib/components/sign-in/sign-in.component.scss",
-            "hash": "0be2cfe1c68b72e31c76b39cd21dbc73d2237d12",
+            "hash": "bc57f30561c6d6682eb5e317a39c8b1f42c7294b",
             "ext": ".scss"
           },
           {
