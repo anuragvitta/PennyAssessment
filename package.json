@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "nx",
     "nx": "nx",
-    "start": "nx serve user-service",
+    "start": "node deploy/user-service/main.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",
